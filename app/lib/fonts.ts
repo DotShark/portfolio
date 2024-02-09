@@ -10,6 +10,11 @@ export const montserratBold = Montserrat({
   subsets: ["latin"]
 });
 
+export const montserratSemiBold = Montserrat({
+  weight: "600",
+  subsets: ["latin"]
+});
+
 export const montserratMedium = Montserrat({
   weight: "500",
   subsets: ["latin"]
