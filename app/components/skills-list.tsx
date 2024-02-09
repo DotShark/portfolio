@@ -1,16 +1,11 @@
 import Image from "next/image";
 import { montserratBold } from "../lib/fonts";
+import { Skill } from "../lib/skills";
 
 type SkillsListProps = {
   iconPath: string,
   title: string,
   skills: Skill[]
-};
-
-type Skill = {
-  iconPath: string,
-  text: string,
-  color: string
 };
 
 export function SkillsList({iconPath, title, skills}: SkillsListProps) {

@@ -1,6 +1,31 @@
 import Header from "./components/header";
+import { ProjectCard } from "./components/project-card";
 import { SkillsList } from "./components/skills-list";
 import { Title } from "./components/title";
+import {
+  adobeAfterEffects,
+  adobeIllustrator,
+  adobePhotoshop,
+  canva,
+  css,
+  dart,
+  express,
+  figma,
+  flutter,
+  html,
+  javascript,
+  mongoDB,
+  mySQL,
+  nextJS,
+  nodejs,
+  postgreSQL,
+  prisma,
+  react,
+  sequelize,
+  tailwind,
+  typescript,
+  vue,
+} from "./lib/skills";
 
 export default function Home() {
   return (
@@ -19,47 +44,75 @@ export default function Home() {
       <SkillsList
         iconPath="/icons/front-end.svg"
         title="Développement front-end"
-        skills={
-          [
-            {iconPath: "/icons/flutter.svg", text: "Flutter", color: "bg-sky-600/40"},
-            {iconPath: "/icons/react.svg", text: "React", color: "bg-cyan-500/40"},
-            {iconPath: "/icons/next-js.svg", text: "Next.js", color: "bg-gray-500/40"},
-            {iconPath: "/icons/vue.svg", text: "Vue", color: "bg-green-500/40"},
-            {iconPath: "/icons/html.svg", text: "HTML", color: "bg-orange-600/40"},
-            {iconPath: "/icons/css.svg", text: "CSS", color: "bg-blue-700/40"},
-            {iconPath: "/icons/tailwind.svg", text: "Tailwind", color: "bg-teal-600/40"},
-            {iconPath: "/icons/javascript.svg", text: "JavaScript", color: "bg-yellow-400/40"},
-            {iconPath: "/icons/typescript.svg", text: "TypeScript", color: "bg-blue-600/40"}
-          ]
-        }
+        skills={[
+          javascript,
+          typescript,
+          dart,
+          flutter,
+          react,
+          nextJS,
+          vue,
+          html,
+          css,
+          tailwind,
+        ]}
       />
       <SkillsList
         iconPath="/icons/back-end.svg"
         title="Développement back-end"
-        skills={
-          [
-            {iconPath: "/icons/nodejs.svg", text: "Node.js", color: "bg-green-600/40"},
-            {iconPath: "/icons/express.svg", text: "Express", color: "bg-gray-500/40"},
-            {iconPath: "/icons/postgresql.svg", text: "PostgreSQL", color: "bg-sky-600/40"},
-            {iconPath: "/icons/mysql.svg", text: "MySQL", color: "bg-cyan-800/40"},
-            {iconPath: "/icons/mongodb.svg", text: "MongoDB", color: "bg-green-500/40"},
-            {iconPath: "/icons/sequelize.svg", text: "Sequelize", color: "bg-sky-500/40"},
-            {iconPath: "/icons/prisma.svg", text: "Prisma", color: "bg-gray-500/40"},
-          ]
-        }
+        skills={[
+          javascript,
+          typescript,
+          nodejs,
+          express,
+          postgreSQL,
+          mySQL,
+          mongoDB,
+          sequelize,
+          prisma,
+        ]}
       />
       <SkillsList
         iconPath="/icons/design.svg"
         title="Design"
-        skills={
-          [
-            {iconPath: "/icons/figma.svg", text: "Figma", color: "bg-pink-500/40"},
-            {iconPath: "/icons/adobe-photoshop.svg", text: "Adobe Photoshop", color: "bg-blue-500/40"},
-            {iconPath: "/icons/canva.svg", text: "Canva", color: "bg-sky-500/40"},
-            {iconPath: "/icons/adobe-illustrator.svg", text: "Adobe Illustrator", color: "bg-orange-500/40"},
-            {iconPath: "/icons/adobe-after-effects.svg", text: "Adobe After Effects", color: "bg-violet-500/40"}
-          ]
-        }
+        skills={[
+          figma,
+          adobePhotoshop,
+          canva,
+          adobeIllustrator,
+          adobeAfterEffects,
+        ]}
+      />
+      <Title text="Mes projets" />
+      <ProjectCard
+        name="TechTutor"
+        period={["Novembre 2023", "Janvier 2024"]}
+        imagePath="/projects/techtutor.jpg"
+        shortDescription="TechTutor est une application qui a pour objectif de combattre la fracture numérique 
+        en proposant des cours d’informatiques accessibles et ludiques à toutes et à tous."
+        usedSkills={[
+          typescript,
+          nodejs,
+          express,
+          prisma,
+          react,
+          tailwind
+        ]}
+      />
+      <ProjectCard
+        name="Truckrs"
+        period={["Janvier 2023", "Décembre 2023"]}
+        imagePath="/projects/truckrs.png"
+        shortDescription="Truckrs est une application qui permet la mise en relation de conducteur qualifiés 
+        avec des acteurs du monde du transport à la recherche de freelances. "
+        usedSkills={[
+          typescript,
+          nodejs,
+          express,
+          sequelize,
+          dart,
+          flutter
+        ]}
       />
     </main>
   );
