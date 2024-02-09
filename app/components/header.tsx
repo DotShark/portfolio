@@ -17,11 +17,11 @@ export default function Header({title, subtitle, description, resumeText, resume
     <div className="w-full bg-gray-900 bg-opacity-60 rounded-3xl p-8 gap-6 flex flex-col items-center">
       <div className="rounded-full p-1 bg-gradient-to-br from-purple-500 to-cyan-600">
         <div className="rounded-full overflow-hidden">
-          <Image src="/avatar.jpg" alt="Avatar" width={128} height={128} quality={80} />
+          <Image src="/avatar.jpg" alt="Avatar" width={128} height={128} quality={80} priority={true} />
         </div>
       </div>
       <div className="flex flex-col items-center gap-2">
-        <h1 className={`text-3xl text-center ${montserratBold.className}`}>{title}</h1>
+        <h1 className={`text-2xl text-center ${montserratBold.className}`}>{title}</h1>
         <h2 className={`text-xl text-center ${montserratMedium.className}`} >{subtitle}</h2>
       </div>
       <p className="text-sm text-justify">{description}</p>

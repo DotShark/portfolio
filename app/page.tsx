@@ -1,5 +1,6 @@
 import Header from "./components/header";
 import { SkillsList } from "./components/skills-list";
+import { Title } from "./components/title";
 
 export default function Home() {
   return (
@@ -15,9 +16,10 @@ export default function Home() {
           githubUrl="https://github.com/DotShark/"
           linkedInUrl="https://www.linkedin.com/in/arnaud-petit-dev/"
         />
+        <Title text="Mes compétences" />
         <SkillsList
           iconPath="/icons/front-end.png"
-          title="Dev front-end"
+          title="Développement front-end"
           skills={
             [
               {iconPath: "/icons/flutter.svg", text: "Flutter", color: "bg-sky-600/40"},
@@ -29,6 +31,21 @@ export default function Home() {
               {iconPath: "/icons/tailwind.svg", text: "Tailwind", color: "bg-teal-600/40"},
               {iconPath: "/icons/javascript.svg", text: "JavaScript", color: "bg-yellow-400/40"},
               {iconPath: "/icons/typescript.svg", text: "TypeScript", color: "bg-blue-600/40"}
+            ]
+          }
+        />
+        <SkillsList
+          iconPath="/icons/front-end.png"
+          title="Développement back-end"
+          skills={
+            [
+              {iconPath: "/icons/nodejs.svg", text: "Node.js", color: "bg-green-600/40"},
+              {iconPath: "/icons/express.svg", text: "Express", color: "bg-gray-500/40"},
+              {iconPath: "/icons/postgresql.svg", text: "PostgreSQL", color: "bg-sky-600/40"},
+              {iconPath: "/icons/mysql.svg", text: "MySQL", color: "bg-cyan-800/40"},
+              {iconPath: "/icons/mongodb.svg", text: "MongoDB", color: "bg-green-500/40"},
+              {iconPath: "/icons/sequelize.svg", text: "Sequelize", color: "bg-sky-500/40"},
+              {iconPath: "/icons/prisma.svg", text: "Prisma", color: "bg-gray-500/40"},
             ]
           }
         />
