@@ -12,7 +12,7 @@ type ProjectProps = {
 
 export function ProjectCard({name, period, imagePath, shortDescription, usedSkills}: ProjectProps) {
   return (
-    <div className="w-full rounded-3xl bg-gray-900 bg-opacity-60 p-6 flex flex-col items-start justify-center gap-4">
+    <div className="w-full rounded-3xl bg-gray-900/60 backdrop-blur p-6 flex flex-col items-start justify-center gap-4">
       <div className="flex flex-row items-center justify-start gap-4">
         <div className="rounded-2xl overflow-hidden">
           <Image src={imagePath} alt={name} width={80} height={80} priority={false} />

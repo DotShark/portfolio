@@ -1,5 +1,6 @@
 import { Footer } from "./components/footer";
 import Header from "./components/header";
+import { LinkedParticles } from "./components/linked-particles";
 import { ProjectCard } from "./components/project-card";
 import { SkillsList } from "./components/skills-list";
 import { Title } from "./components/title";
@@ -125,6 +126,7 @@ export default function Home() {
         year="2024"
         sourceUrl="https://github.com/DotShark/portfolio_dev"
       />
+      <LinkedParticles />
     </div>
   );
 }

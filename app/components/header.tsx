@@ -14,7 +14,7 @@ type HeaderProps = {
 
 export default function Header({title, subtitle, description, resumeText, resumeUrl, githubUrl, linkedInUrl}: HeaderProps) {
   return (
-    <div className="w-full bg-gray-900 bg-opacity-60 rounded-3xl p-8 gap-6 flex flex-col items-center">
+    <div className="w-full bg-gray-900/60 backdrop-blur rounded-3xl p-8 gap-6 flex flex-col items-center">
       <div className="rounded-full p-1 bg-gradient-to-br from-purple-500 to-cyan-600">
         <div className="rounded-full overflow-hidden">
           <Image src="/avatar.jpg" alt="Avatar" width={128} height={128} quality={80} priority={true} />
