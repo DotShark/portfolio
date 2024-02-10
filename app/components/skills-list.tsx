@@ -4,15 +4,18 @@ import { Skill } from "../lib/skills";
 
 type SkillsListProps = {
   iconPath: string,
+  color: string,
   title: string,
   skills: Skill[]
 };
 
-export function SkillsList({iconPath, title, skills}: SkillsListProps) {
+export function SkillsList({iconPath, color, title, skills}: SkillsListProps) {
   return (
     <div className="w-full bg-gray-900 bg-opacity-60 rounded-3xl p-8 gap-6 flex flex-col items-center">
-      <Image src={iconPath} alt={title} width={64} height={64} priority={false} />
-      <h2 className={`text-xl text-center ${montserratBold.className}`}>{title}</h2>
+      <div className={`${color} rounded-2xl p-3 flex flex-col items-center justify-center`}>
+        <Image src={iconPath} alt={title} width={48} height={48} priority={false} />
+        <h2 className={`text-xl text-center ${montserratBold.className}`}>{title}</h2>
+      </div>
       <div className="flex flex-raw flex-wrap items-center justify-center gap-3">
         {
           skills.map((skill, key) => {
