@@ -1,9 +1,9 @@
 "use client";
 
-import { FaBars, FaSun } from "react-icons/fa";
-import { montserratBold } from "../lib/fonts";
+import { montserratMedium } from "../lib/fonts";
 import { useState } from "react";
 import ClickAwayListener from "react-click-away-listener";
+import { FiMenu, FiSun } from "react-icons/fi";
 
 export function NavMenu() {
   const [displayMenu, setDisplayMenu] = useState(false);
@@ -15,12 +15,14 @@ export function NavMenu() {
     <ClickAwayListener onClickAway={closeMenu}>
       <nav className="fixed z-10 w-screen flex flex-col items-center">
         <div className="w-full bg-[#2C2848] flex flex-row drop-shadow-lg">
-          <button className="px-8 py-4 grow flex flex-row gap-4" onClick={toggleMenu}>
-            <FaBars size={24} />
-            <h1 className={`${montserratBold.className} text-lg`}>Résumé</h1>
+          <button className="px-8 py-4 grow flex flex-row gap-4 hover:text-indigo-300 transition-colors" onClick={toggleMenu}>
+            <FiMenu size={24} />
+            <h1 className={`${montserratMedium.className} text-lg`}>Résumé</h1>
           </button>
-          <button className="px-8 py-4">
-            <FaSun size={24} />
+          <button className="px-4">
+            <div className="p-4 rounded-full hover:bg-gray-500/30 transition-colors">
+              <FiSun size={24} />
+            </div>
           </button>
         </div>
         <div className={`w-screen ${displayMenu ? "h-32" : "h-0"} transition-all bg-gray-900/60 px-8 backdrop-blur overflow-hidden flex flex-col justify-center`}>

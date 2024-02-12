@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { montserratBold, montserratMedium } from "../lib/fonts";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 
 type HeaderProps = {
   title: string,
@@ -26,16 +26,16 @@ export default function Header({title, subtitle, description, resumeText, resume
       </div>
       <p className="text-sm">{description}</p>
       <a className="w-full" href={resumeUrl}>
-        <div className="flex flex-row items-center justify-center w-full h-10 rounded-2xl border-2 border-white">
+        <div className="flex flex-row items-center justify-center w-full h-10 rounded-2xl border-2 border-white hover:bg-purple-500/30 transition-colors">
           <p className="text-lg text-center uppercase">{resumeText}</p>
         </div>
       </a>
-      <div className="flex flex-row items-center justify-center w-full gap-3">
-        <a href={githubUrl}>
-          <FaGithub size={24} />
+      <div className="flex flex-row -my-3 items-center justify-center w-full">
+        <a className="p-3 rounded-full hover:bg-gray-500/30 transition-colors" href={githubUrl}>
+          <FiGithub size={24} />
         </a>
-        <a href={linkedInUrl}>
-          <FaLinkedin size={24} />
+        <a className="p-3 rounded-full hover:bg-gray-500/30 transition-colors" href={linkedInUrl}>
+          <FiLinkedin size={24} />
         </a>
       </div>
     </div>
