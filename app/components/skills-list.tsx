@@ -16,7 +16,7 @@ export function SkillsList({iconPath, color, title, skills}: SkillsListProps) {
         <Image src={iconPath} alt={title} width={48} height={48} priority={false} />
         <h2 className={`text-xl text-center ${montserratBold.className}`}>{title}</h2>
       </div>
-      <div className="flex flex-raw flex-wrap items-center justify-center gap-3">
+      <div className="flex flex-row flex-wrap items-center justify-center gap-3">
         {
           skills.map((skill, key) => {
             return (

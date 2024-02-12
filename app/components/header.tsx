@@ -24,7 +24,7 @@ export default function Header({title, subtitle, description, resumeText, resume
         <h1 className={`text-2xl text-center ${montserratBold.className}`}>{title}</h1>
         <h2 className={`text-xl text-center ${montserratMedium.className}`} >{subtitle}</h2>
       </div>
-      <p className="text-sm text-justify">{description}</p>
+      <p className="text-sm">{description}</p>
       <a className="w-full" href={resumeUrl}>
         <div className="flex flex-row items-center justify-center w-full h-10 rounded-2xl border-2 border-white">
           <p className="text-lg text-center uppercase">{resumeText}</p>

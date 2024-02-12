@@ -26,7 +26,7 @@ export function ProjectCard({name, period, imagePath, shortDescription, usedSkil
           </h3>
         </div>
       </div>
-      <p className="text-sm text-justify">{shortDescription}</p>
+      <p className="text-sm">{shortDescription}</p>
       <div className="flex flex-raw flex-wrap items-center justify-start gap-3">
         {
           usedSkills.map((skill, key) => {

@@ -1,6 +1,7 @@
 import { Footer } from "./components/footer";
 import Header from "./components/header";
 import { LinkedParticles } from "./components/linked-particles";
+import { NavMenu } from "./components/nav-menu";
 import { ProjectCard } from "./components/project-card";
 import { SkillsList } from "./components/skills-list";
 import { Title } from "./components/title";
@@ -15,7 +16,6 @@ import {
   figma,
   flutter,
   html,
-  javascript,
   mongoDB,
   mySQL,
   nextJS,
@@ -31,8 +31,9 @@ import {
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-8">
-      <main className="min-h-screen px-6 pt-6 flex flex-col gap-8 items-center">
+    <div className="min-h-screen flex flex-col gap-8">
+      <NavMenu />
+      <main className="px-6 pt-20 pb-6 flex flex-col gap-8 items-center">
         <Header
           title="Arnaud Petit"
           subtitle="Développeur full-stack"
@@ -49,7 +50,6 @@ export default function Home() {
           color="bg-purple-500/30"
           title="Front-end"
           skills={[
-            javascript,
             typescript,
             dart,
             flutter,
@@ -66,7 +66,6 @@ export default function Home() {
           color="bg-red-500/30"
           title="Back-end"
           skills={[
-            javascript,
             typescript,
             nodejs,
             express,
@@ -126,6 +125,7 @@ export default function Home() {
         year="2024"
         sourceUrl="https://github.com/DotShark/portfolio_dev"
       />
+      <div className="fixed w-screen h-screen bg-dark-gradient -z-10"></div>
       <LinkedParticles />
     </div>
   );

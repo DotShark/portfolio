@@ -38,7 +38,7 @@ export function LinkedParticles() {
     []
   );
 
-  return init && <div className="absolute -z-10 opacity-40">
+  return init && <div className="fixed -z-10 opacity-40">
     <Particles 
       id="linked-particles"
       options={options}

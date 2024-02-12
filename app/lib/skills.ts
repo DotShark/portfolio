@@ -4,8 +4,6 @@ export type Skill = {
   color: string
 };
 
-export const javascript: Skill = {iconPath: "/icons/javascript.svg", text: "JavaScript", color: "bg-yellow-400/40"};
-
 export const typescript: Skill = {iconPath: "/icons/typescript.svg", text: "TypeScript", color: "bg-blue-600/40"};
 
 export const dart: Skill = {iconPath: "/icons/dart.svg", text: "Dart", color: "bg-sky-600/40"};
@@ -38,7 +36,7 @@ export const sequelize: Skill = {iconPath: "/icons/sequelize.svg", text: "Sequel
 
 export const prisma: Skill = {iconPath: "/icons/prisma.svg", text: "Prisma", color: "bg-gray-500/40"};
 
-export const figma: Skill = {iconPath: "/icons/prisma.svg", text: "Prisma", color: "bg-gray-500/40"};
+export const figma: Skill = {iconPath: "/icons/prisma.svg", text: "Figma", color: "bg-gray-500/40"};
 
 export const adobePhotoshop: Skill = {iconPath: "/icons/adobe-photoshop.svg", text: "Adobe Photoshop", color: "bg-blue-500/40"};
 
