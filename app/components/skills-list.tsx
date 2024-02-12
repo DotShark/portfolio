@@ -1,15 +1,8 @@
 import Image from "next/image";
 import { montserratBold } from "../lib/fonts";
-import { Skill } from "../lib/skills";
+import { SkillsCategory } from "../lib/skills-categories";
 
-type SkillsListProps = {
-  iconPath: string,
-  color: string,
-  title: string,
-  skills: Skill[]
-};
-
-export function SkillsList({iconPath, color, title, skills}: SkillsListProps) {
+export function SkillsList({iconPath, color, title, skills}: SkillsCategory) {
   return (
     <div className="w-full bg-gray-900/60 backdrop-blur rounded-3xl p-8 gap-6 flex flex-col items-center">
       <div className={`${color} rounded-2xl p-3 flex flex-col items-center justify-center`}>

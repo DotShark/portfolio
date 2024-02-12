@@ -1,16 +1,10 @@
 import { montserratBold, montserratMedium } from "../lib/fonts";
 import Image from "next/image";
-import { Skill } from "../lib/skills";
+import { Project } from "../lib/projects";
+import { OutlinedButton } from "./outlined-button";
+import { FiChevronRight } from "react-icons/fi";
 
-type ProjectProps = {
-  name: string,
-  period: string[],
-  imagePath: string,
-  shortDescription: string,
-  usedSkills: Skill[]
-};
-
-export function ProjectCard({name, period, imagePath, shortDescription, usedSkills}: ProjectProps) {
+export function ProjectCard({name, period, imagePath, shortDescription, usedSkills}: Project) {
   return (
     <div className="w-full rounded-3xl bg-gray-900/60 backdrop-blur p-6 flex flex-col items-start justify-center gap-4">
       <div className="flex flex-row items-center justify-start gap-4">
@@ -39,6 +33,12 @@ export function ProjectCard({name, period, imagePath, shortDescription, usedSkil
           })
         }
       </div>
+      <OutlinedButton
+        text="Voir les détails" 
+        large={true} 
+        leftIcon={<div className="w-2"></div>} 
+        rightIcon={<FiChevronRight size={20} />}
+      />
     </div>
   );
 }

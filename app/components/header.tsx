@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { montserratBold, montserratMedium } from "../lib/fonts";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { OutlinedButton } from "./outlined-button";
 
 type HeaderProps = {
   title: string,
@@ -26,9 +27,7 @@ export default function Header({title, subtitle, description, resumeText, resume
       </div>
       <p className="text-sm">{description}</p>
       <a className="w-full" href={resumeUrl}>
-        <div className="flex flex-row items-center justify-center w-full h-10 rounded-2xl border-2 border-white hover:bg-purple-500/30 transition-colors">
-          <p className="text-lg text-center uppercase">{resumeText}</p>
-        </div>
+        <OutlinedButton text="Voir mon CV" large={true} />
       </a>
       <div className="flex flex-row -my-3 items-center justify-center w-full">
         <a className="p-3 rounded-full hover:bg-gray-500/30 transition-colors" href={githubUrl}>
