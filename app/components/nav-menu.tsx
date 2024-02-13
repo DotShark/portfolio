@@ -4,6 +4,7 @@ import { MutableRefObject, useState } from "react";
 import ClickAwayListener from "react-click-away-listener";
 import { FiHome, FiMenu } from "react-icons/fi";
 import { Section } from "../lib/section";
+import Link from "next/link";
 
 type NavMenuProps = {
   sections: Section[]
@@ -26,11 +27,11 @@ export function NavMenu({sections}: NavMenuProps) {
     <ClickAwayListener onClickAway={closeMenu}>
       <nav className="fixed z-10 w-screen flex flex-col items-center">
         <div className="w-full bg-[#2C2848] flex flex-row drop-shadow-lg">
-          <a href="/" className="px-4">
+          <Link href="/" className="px-4">
             <div className="p-4 rounded-full hover:bg-gray-500/30 transition-colors">
               <FiHome size={24} />
             </div>
-          </a>
+          </Link>
           <div className="grow"></div>
           <button className="px-4">
             <div className="p-4 rounded-full hover:bg-gray-500/30 transition-colors" onClick={toggleMenu}>

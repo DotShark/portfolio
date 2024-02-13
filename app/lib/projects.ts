@@ -1,16 +1,18 @@
 import { Skill, dart, express, flutter, nodejs, prisma, react, sequelize, tailwind, typescript } from "./skills";
 
 export type Project = {
+  slug: string,
   name: string,
   period: string[],
   imagePath: string,
-  shortDescription: string,
+  shortDescription?: string,
   longDescription?: string,
   usedSkills: Skill[]
 };
 
 export const projects: Project[] = [
   {
+    slug: "techtutor",
     name: "TechTutor",
     period: ["Novembre 2023", "Janvier 2024"],
     imagePath: "/projects/techtutor.jpg",
@@ -25,6 +27,7 @@ export const projects: Project[] = [
     ]
   },
   {
+    slug: "truckrs",
     name: "Truckrs",
     period: ["Janvier 2023", "Décembre 2023"],
     imagePath: "/projects/truckrs.png",
@@ -39,3 +42,7 @@ export const projects: Project[] = [
     ]
   },
 ];
+
+export function getProject(slug: string): Project {
+  return projects.find((project) => project.slug === slug)!;
+}

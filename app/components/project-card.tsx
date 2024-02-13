@@ -3,8 +3,11 @@ import Image from "next/image";
 import { Project } from "../lib/projects";
 import { OutlinedButton } from "./outlined-button";
 import { FiChevronRight } from "react-icons/fi";
+import Link from "next/link";
 
-export function ProjectCard({name, period, imagePath, shortDescription, usedSkills}: Project) {
+type ProjectCardProps = Project & {showButton: boolean};
+
+export function ProjectCard({slug, name, period, imagePath, shortDescription, usedSkills, showButton}: ProjectCardProps) {
   return (
     <div className="w-full rounded-3xl bg-gray-900/60 backdrop-blur p-6 flex flex-col items-start justify-center gap-4">
       <div className="flex flex-row items-center justify-start gap-4">
@@ -20,7 +23,9 @@ export function ProjectCard({name, period, imagePath, shortDescription, usedSkil
           </h3>
         </div>
       </div>
-      <p className="text-sm">{shortDescription}</p>
+      {
+        shortDescription && <p className="text-sm">{shortDescription}</p>
+      }
       <div className="flex flex-raw flex-wrap items-center justify-start gap-3">
         {
           usedSkills.map((skill, key) => {
@@ -33,12 +38,17 @@ export function ProjectCard({name, period, imagePath, shortDescription, usedSkil
           })
         }
       </div>
-      <OutlinedButton
-        text="Voir les détails" 
-        large={true} 
-        leftIcon={<div className="w-2"></div>} 
-        rightIcon={<FiChevronRight size={20} />}
-      />
+      {
+        showButton && 
+        <Link className="w-full" href={`/projects/${slug}`}>
+          <OutlinedButton
+            text="Voir les détails" 
+            large={true} 
+            leftIcon={<div className="w-2"></div>} 
+            rightIcon={<FiChevronRight size={20} />}
+          />
+        </Link>
+      }
     </div>
   );
 }

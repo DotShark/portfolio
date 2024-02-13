@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { Footer } from "./components/footer";
-import Header from "./components/header";
+import { Header } from "./components/header";
 import { LinkedParticles } from "./components/linked-particles";
 import { NavMenu } from "./components/nav-menu";
 import { ProjectCard } from "./components/project-card";
@@ -12,7 +12,7 @@ import { Section } from "./lib/section";
 import { skillCategories } from "./lib/skills-categories";
 import { projects } from "./lib/projects";
 
-export default function Home() {
+export default function HomePage() {
   const headerSection: Section = {
     title: "Résumé",
     ref: useRef<HTMLDivElement | null>(null)
@@ -29,7 +29,7 @@ export default function Home() {
   };
 
   return (
-    <div className="h-screen flex flex-col gap-8">
+    <div className="min-h-screen flex flex-col gap-8 justify-between">
       <NavMenu sections={[headerSection, skillsSection, projectsSection]} />
       <main className="px-6 pt-20 pb-6 flex flex-col gap-8 items-center">
         <section ref={headerSection.ref} className="w-full flex flex-col gap-8 scroll-m-20">
@@ -61,14 +61,16 @@ export default function Home() {
         <section ref={projectsSection.ref} className="w-full flex flex-col gap-8 scroll-m-20">
           <Title text="Mes projets" />
           {
-            projects.map(({name, period, imagePath, shortDescription, usedSkills}, key) => (
+            projects.map(({slug, name, period, imagePath, shortDescription, usedSkills}, key) => (
               <ProjectCard
                 key={key}
+                slug={slug}
                 name={name}
                 period={period}
                 imagePath={imagePath}
                 shortDescription={shortDescription}
                 usedSkills={usedSkills}
+                showButton={true}
               />
             ))
           }

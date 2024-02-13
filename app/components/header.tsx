@@ -13,7 +13,7 @@ type HeaderProps = {
   linkedInUrl: string
 };
 
-export default function Header({title, subtitle, description, resumeText, resumeUrl, githubUrl, linkedInUrl}: HeaderProps) {
+export function Header({title, subtitle, description, resumeText, resumeUrl, githubUrl, linkedInUrl}: HeaderProps) {
   return (
     <div className="w-full bg-gray-900/60 backdrop-blur rounded-3xl p-8 gap-6 flex flex-col items-center">
       <div className="rounded-full p-1 bg-gradient-to-br from-purple-500 to-cyan-600">
