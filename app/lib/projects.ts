@@ -57,7 +57,26 @@ export const projects: Project[] = [
     name: "Truckrs",
     period: ["Janvier 2023", "Décembre 2023"],
     imagePath: "/projects/truckrs.png",
-    shortDescription: "Truckrs est une application qui permet la mise en relation de conducteur qualifiés avec des acteurs du monde du transport à la recherche de freelances.",
+    shortDescription: "Truckrs est une plateforme qui connecte les transporteurs et les conducteurs indépendants via deux applications mobiles distinctes. Une est destinée aux transporteurs et l'autre aux chauffeurs indépendants.",
+    longDescription:
+      "## Truckrs, qu'est-ce que c'est ?\n" +
+      "Truckrs est une plateforme qui connecte les transporteurs et les conducteurs indépendants via deux applications mobiles distinctes. Une est destinée aux transporteurs et l'autre aux chauffeurs indépendants.\n" +
+      "## Pourquoi ce projet ?\n" +
+      "Truckrs est né d’un constat sur le marché du transport routier français : il manque 60 000 conducteurs routiers en France.\n\n" +
+      "Face à cette pénurie de conducteurs, Truckrs vise à combler ce déficit en mettant en relation les transporteurs et les conducteurs indépendants. L’objectif est d’aider les conducteurs à prendre le contrôle de leur vie d’auto-entrepreneur.\n" +
+      "## Dans quel contexte ai-je travaillé sur ce projet ?\n" +
+      "J'ai signé un contrat en alternance chez Truckrs au début de l'année 2023. Nous étions 3 alternants et un CTO à travailler sur ce projet durant toute l'année. Un lead dev nous a rejoint en septembre ce qui nous a permis d'améliorer nos process et de régler une partie des problèmes de dette technique.\n" +
+      "## Quel est le public visé ?\n" +
+      "Le public visé par Truckrs comprend deux parties :\n" +
+      "- D’une part, les transporteurs à la recherche de conducteurs pour leurs missions.\n" +
+      "- D’autre part, les conducteurs indépendants cherchant des opportunités de travail.\n" +
+      "## Quels défis avons-nous du relever ?\n" +
+      "- Nous avons du apprendre à nous mettre à la place des transporteurs et des conducteurs.\n" +
+      "- Nous avons du comprendre comment obtenir une expérience utilisateur fluide et intuitive en nous basant sur les maquettes produites par l'UX designer.\n" +
+      "- Nous avons du intégrer les fonctionnalités spécifiques aux transporteurs et aux conducteurs.\n" +
+      "- Nous avons du optimiser les performances de l’application mobile.\n" +
+      "- Nous avons du nous assurer que le back-end était robuste et sécurisé."
+    ,
     usedSkills: [
       typescript,
       nodejs,
