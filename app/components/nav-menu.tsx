@@ -39,7 +39,7 @@ export function NavMenu({sections}: NavMenuProps) {
             </div>
           </button>
         </div>
-        <div className={`w-screen ${displayMenu ? "h-32" : "h-0"} transition-all bg-gray-900/60 px-8 backdrop-blur overflow-hidden flex flex-col justify-center`}>
+        <div className={`w-screen ${displayMenu ? "h-32" : "h-0"} transition-all bg-gray-900/60 px-8 backdrop-blur-sm overflow-hidden flex flex-col justify-center`}>
           <ul className="flex flex-col">
             {
               sections.map((section) => (
