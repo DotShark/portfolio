@@ -32,10 +32,10 @@ export function Header({title, subtitle, description, resumeText, resumeUrl, git
           <OutlinedButton text={resumeText} large={true} />
         </a>
         <div className="flex flex-row -my-3 items-center justify-center w-full">
-          <a className="p-3 rounded-full hover:bg-gray-500/30 transition-colors" href={githubUrl}>
+          <a className="p-3 rounded-full hover:bg-gray-500/30 transition-colors" href={githubUrl} aria-label="GitHub">
             <FiGithub size={24} />
           </a>
-          <a className="p-3 rounded-full hover:bg-gray-500/30 transition-colors" href={linkedInUrl}>
+          <a className="p-3 rounded-full hover:bg-gray-500/30 transition-colors" href={linkedInUrl} aria-label="LinkedIn">
             <FiLinkedin size={24} />
           </a>
         </div>

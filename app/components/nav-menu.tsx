@@ -27,13 +27,13 @@ export function NavMenu({sections}: NavMenuProps) {
     <ClickAwayListener onClickAway={closeMenu}>
       <nav className="fixed z-10 w-screen flex flex-col items-center">
         <div className="w-full bg-[#2C2848] flex flex-row drop-shadow-lg">
-          <Link href="/" className="px-4">
+          <Link href="/" className="px-4" aria-label="Accueil">
             <div className="p-4 rounded-full hover:bg-gray-500/30 transition-colors">
               <FiHome size={24} />
             </div>
           </Link>
           <div className="grow"></div>
-          <button className="px-4">
+          <button className="px-4" aria-label="Menu">
             <div className="p-4 rounded-full hover:bg-gray-500/30 transition-colors" onClick={toggleMenu}>
               <FiMenu size={24} />
             </div>
