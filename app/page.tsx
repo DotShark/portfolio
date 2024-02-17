@@ -29,9 +29,9 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col gap-8 justify-between">
+    <div className="min-h-screen flex flex-col gap-8 items-center justify-between">
       <NavMenu sections={[headerSection, skillsSection, projectsSection]} />
-      <main className="px-6 pt-20 pb-6 flex flex-col gap-8 items-center">
+      <main className="px-6 pt-20 pb-6 max-w-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl flex flex-col gap-8 items-center">
         <section ref={headerSection.ref} className="w-full flex flex-col gap-8 scroll-m-20">
           <Header
             title="Arnaud Petit"
@@ -46,17 +46,19 @@ export default function HomePage() {
         </section>
         <section ref={skillsSection.ref} className="w-full flex flex-col gap-8 scroll-m-20">
           <Title text="Mes compétences" />
-          {
-            skillCategories.map(({iconPath, color, title, skills}, key) => (
-              <SkillsList 
-                key={key} 
-                iconPath={iconPath} 
-                color={color} 
-                title={title} 
-                skills={skills} 
-              />
-            ))
-          }
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-stretch">
+            {
+              skillCategories.map(({iconPath, color, title, skills}, key) => (
+                <SkillsList 
+                  key={key} 
+                  iconPath={iconPath} 
+                  color={color} 
+                  title={title} 
+                  skills={skills} 
+                />
+              ))
+            }
+          </div>
         </section>
         <section ref={projectsSection.ref} className="w-full flex flex-col gap-8 scroll-m-20">
           <Title text="Mes projets" />

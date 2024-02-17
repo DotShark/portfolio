@@ -34,9 +34,9 @@ export default function ProjectPage({params}: {params: ProjectPageParams}) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col gap-8 justify-between">
+    <div className="min-h-screen flex flex-col gap-8 items-center justify-between">
       <NavMenu sections={links ? [headerSection, descriptionSection, linksSection] : [headerSection, descriptionSection]} />
-      <main className="px-6 pt-20 pb-6 flex flex-col gap-8 items-center">
+      <main className="px-6 pt-20 pb-6 max-w-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl flex flex-col gap-8 items-center">
         <section ref={headerSection.ref} className="w-full flex flex-col gap-8 scroll-m-20">
           <ProjectCard
             slug={slug}

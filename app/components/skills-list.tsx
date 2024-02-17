@@ -6,7 +6,7 @@ import { ParticlesMask } from "./particles-mask";
 export function SkillsList({iconPath, color, title, skills}: SkillsCategory) {
   return (
     <ParticlesMask>
-      <div className="w-full bg-gray-900/60 rounded-3xl p-8 gap-6 flex flex-col items-center">
+      <div className="w-full h-full bg-gray-900/60 rounded-3xl p-8 gap-6 flex flex-col items-center">
         <div className={`${color} rounded-2xl p-3 flex flex-col items-center justify-center`}>
           <Image src={iconPath} alt={title} width={48} height={48} priority={false} />
           <h2 className={`text-xl text-center ${montserratBold.className}`}>{title}</h2>

@@ -26,21 +26,23 @@ export function NavMenu({sections}: NavMenuProps) {
   return (
     <ClickAwayListener onClickAway={closeMenu}>
       <nav className="fixed z-10 w-screen flex flex-col items-center">
-        <div className="w-full bg-[#2C2848] flex flex-row drop-shadow-lg">
-          <Link href="/" className="px-4" aria-label="Accueil">
-            <div className="p-4 rounded-full hover:bg-gray-500/30 transition-colors">
-              <FiHome size={24} />
-            </div>
-          </Link>
-          <div className="grow"></div>
-          <button className="px-4" aria-label="Menu">
-            <div className="p-4 rounded-full hover:bg-gray-500/30 transition-colors" onClick={toggleMenu}>
-              <FiMenu size={24} />
-            </div>
-          </button>
+        <div className="w-full bg-[#2C2848] drop-shadow-lg flex flex-row justify-center">
+          <div className="grow max-w-md flex flex-row">
+            <Link href="/" className="px-4" aria-label="Accueil">
+              <div className="p-4 rounded-full hover:bg-gray-500/30 transition-colors">
+                <FiHome size={24} />
+              </div>
+            </Link>
+            <div className="grow"></div>
+            <button className="px-4" aria-label="Menu">
+              <div className="p-4 rounded-full hover:bg-gray-500/30 transition-colors" onClick={toggleMenu}>
+                <FiMenu size={24} />
+              </div>
+            </button>
+          </div>
         </div>
-        <div className={`w-screen ${displayMenu ? "h-32" : "h-0"} transition-all bg-gray-900/60 px-8 backdrop-blur-sm overflow-hidden flex flex-col justify-center`}>
-          <ul className="flex flex-col">
+        <div className={`w-screen ${displayMenu ? "h-32" : "h-0"} transition-all bg-gray-900/60 backdrop-blur-sm overflow-hidden flex flex-row justify-center`}>
+          <ul className="grow max-w-md px-8 flex flex-col">
             {
               sections.map((section) => (
                 <li key={section.title} className="py-2 hover:text-cyan-200 transition-colors">
