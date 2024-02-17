@@ -11,6 +11,7 @@ export function LinkedParticles() {
   const [particlesOptions, setParticlesOptions] = useState<ISourceOptions>({});
 
   useEffect(() => {
+    if (/Headless/.test(window.navigator.userAgent)) return;
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
