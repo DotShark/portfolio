@@ -46,42 +46,48 @@ export default function HomePage() {
         </section>
         <section ref={skillsSection.ref} className="w-full flex flex-col gap-8 scroll-m-20">
           <Title text="Mes compétences" />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-stretch">
+          <div className="flex flex-row flex-wrap justify-center items-stretch gap-8">
             {
               skillCategories.map(({iconPath, color, title, skills}, key) => (
-                <SkillsList 
-                  key={key} 
-                  iconPath={iconPath} 
-                  color={color} 
-                  title={title} 
-                  skills={skills} 
-                />
+                <div className="basis-full sm:basis-[calc(50%-1rem)] lg:basis-[calc(33.33333333%-1.5rem)]">
+                  <SkillsList 
+                    key={key} 
+                    iconPath={iconPath} 
+                    color={color} 
+                    title={title} 
+                    skills={skills} 
+                  />
+                </div>
               ))
             }
           </div>
         </section>
         <section ref={projectsSection.ref} className="w-full flex flex-col gap-8 scroll-m-20">
           <Title text="Mes projets" />
-          {
-            projects.map(({slug, name, period, imagePath, shortDescription, usedSkills}, key) => (
-              <ProjectCard
-                key={key}
-                slug={slug}
-                name={name}
-                period={period}
-                imagePath={imagePath}
-                shortDescription={shortDescription}
-                usedSkills={usedSkills}
-                showButton={true}
-              />
-            ))
-          }
+          <div className="flex flex-row flex-wrap justify-center items-stretch gap-8">
+            {
+              projects.map(({slug, name, period, imagePath, shortDescription, usedSkills}, key) => (
+                <div className="basis-full lg:basis-[calc(50%-1rem)]">
+                  <ProjectCard
+                    key={key}
+                    slug={slug}
+                    name={name}
+                    period={period}
+                    imagePath={imagePath}
+                    shortDescription={shortDescription}
+                    usedSkills={usedSkills}
+                    showButton={true}
+                  />
+                </div>
+              ))
+            }
+          </div>
         </section>
       </main>
       <Footer
         name="Arnaud Petit"
         year="2024"
-        sourceUrl="https://github.com/DotShark/portfolio_dev"
+        sourceUrl="https://github.com/DotShark/portfolio"
       />
       <div className="fixed w-screen h-screen bg-dark-gradient -z-10"></div>
       <LinkedParticles />

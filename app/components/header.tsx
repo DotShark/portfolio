@@ -20,14 +20,14 @@ export function Header({title, subtitle, description, resumeText, resumeUrl, git
       <div className="w-full bg-gray-900/60 rounded-3xl p-8 gap-6 flex flex-col items-center sm:hidden">
         <div className="rounded-full p-1 bg-gradient-to-br from-purple-500 to-cyan-600">
           <div className="rounded-full overflow-hidden">
-            <Image src="/avatar.jpg" alt="Avatar" width={128} height={128} quality={80} priority={true} />
+            <Image src="/avatar.jpg" alt="Avatar" width={128} height={128} quality={80} priority={false} />
           </div>
         </div>
         <div className="flex flex-col items-center gap-2">
           <h1 className={`text-2xl text-center ${montserratBold.className}`}>{title}</h1>
           <h2 className={`text-xl text-center ${montserratMedium.className}`} >{subtitle}</h2>
         </div>
-        <p className="text-sm">{description}</p>
+        <p className="text-base">{description}</p>
         <a className="w-full" href={resumeUrl}>
           <OutlinedButton text={resumeText} large={true} />
         </a>
@@ -43,7 +43,7 @@ export function Header({title, subtitle, description, resumeText, resumeUrl, git
       <div className="w-full bg-gray-900/60 rounded-3xl p-8 gap-6 flex flex-row items-center max-sm:hidden">
         <div className="rounded-full p-1 bg-gradient-to-br from-purple-500 to-cyan-600">
           <div className="rounded-full overflow-hidden">
-            <Image src="/avatar.jpg" alt="Avatar" width={256} height={256} quality={80} priority={true} />
+            <Image src="/avatar.jpg" alt="Avatar" width={256} height={256} quality={80} priority={false} />
           </div>
         </div>
         <div className="flex flex-col items-start gap-4">
@@ -51,11 +51,12 @@ export function Header({title, subtitle, description, resumeText, resumeUrl, git
             <h1 className={`text-2xl text-center ${montserratBold.className}`}>{title}</h1>
             <h2 className={`text-xl text-center ${montserratMedium.className}`} >{subtitle}</h2>
           </div>
-          <p className="text-sm">{description}</p>
-          <div className="flex flex-row gap-4 items-center">
-            <a className="w-full" href={resumeUrl}>
+          <p className="text-base">{description}</p>
+          <div className="flex flex-row gap-1 items-center">
+            <a href={resumeUrl}>
               <OutlinedButton text={resumeText} large={false} />
             </a>
+            <div className="w-2"></div>
             <a className="p-3 rounded-full hover:bg-gray-500/30 transition-colors" href={githubUrl} aria-label="GitHub">
               <FiGithub size={24} />
             </a>

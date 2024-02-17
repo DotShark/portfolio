@@ -11,7 +11,7 @@ type ProjectCardProps = Project & {showButton: boolean};
 export function ProjectCard({slug, name, period, imagePath, shortDescription, usedSkills, showButton}: ProjectCardProps) {
   return (
     <ParticlesMask>
-      <div className="w-full rounded-3xl bg-gray-900/60 p-6 flex flex-col items-start justify-center gap-4">
+      <div className="w-full h-full rounded-3xl bg-gray-900/60 p-6 flex flex-col items-start justify-center gap-4">
         <div className="flex flex-row items-center justify-start gap-4">
           <div className="rounded-2xl overflow-hidden">
             <Image src={imagePath} alt={name} width={80} height={80} priority={false} />
@@ -26,7 +26,7 @@ export function ProjectCard({slug, name, period, imagePath, shortDescription, us
           </div>
         </div>
         {
-          shortDescription && <p className="text-sm">{shortDescription}</p>
+          shortDescription && <p className="text-base">{shortDescription}</p>
         }
         <div className="flex flex-raw flex-wrap items-center justify-start gap-3">
           {

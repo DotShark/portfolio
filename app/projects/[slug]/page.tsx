@@ -47,12 +47,12 @@ export default function ProjectPage({params}: {params: ProjectPageParams}) {
             showButton={false}
           />
         </section>
-        <section ref={descriptionSection.ref} className="w-full flex flex-col gap-3 scroll-m-20">
+        <section ref={descriptionSection.ref} className="w-full flex flex-col gap-4 scroll-m-20">
           <Title text="Le projet" />
           <ProjectDescription description={longDescription ?? shortDescription} />
         </section>
         {
-          links && <section ref={linksSection.ref} className="w-full flex flex-col gap-3 scroll-m-20">
+          links && <section ref={linksSection.ref} className="w-full flex flex-col gap-4 scroll-m-20">
             <Title text="Liens" />
             {
               links?.map((link, key) => (
@@ -67,7 +67,7 @@ export default function ProjectPage({params}: {params: ProjectPageParams}) {
       <Footer
         name="Arnaud Petit"
         year="2024"
-        sourceUrl="https://github.com/DotShark/portfolio_dev"
+        sourceUrl="https://github.com/DotShark/portfolio"
       />
       <div className="fixed w-screen h-screen bg-dark-gradient -z-10"></div>
       <LinkedParticles />
