@@ -49,7 +49,7 @@ export default function HomePage() {
           <div className="flex flex-row flex-wrap justify-center items-stretch gap-8">
             {
               skillCategories.map(({iconPath, color, title, skills}, key) => (
-                <div className="basis-full sm:basis-[calc(50%-1rem)] lg:basis-[calc(33.33333333%-1.5rem)]">
+                <div key={key} className="basis-full sm:basis-[calc(50%-1rem)] lg:basis-[calc(33.33333333%-1.5rem)]">
                   <SkillsList 
                     key={key} 
                     iconPath={iconPath} 
@@ -67,7 +67,7 @@ export default function HomePage() {
           <div className="flex flex-row flex-wrap justify-center items-stretch gap-8">
             {
               projects.map(({slug, name, period, imagePath, shortDescription, usedSkills}, key) => (
-                <div className="basis-full lg:basis-[calc(50%-1rem)]">
+                <div key={key} className="basis-full lg:basis-[calc(50%-1rem)]">
                   <ProjectCard
                     key={key}
                     slug={slug}
