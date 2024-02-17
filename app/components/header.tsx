@@ -17,7 +17,7 @@ type HeaderProps = {
 export function Header({title, subtitle, description, resumeText, resumeUrl, githubUrl, linkedInUrl}: HeaderProps) {
   return (
     <ParticlesMask>
-      <div className="w-full bg-gray-900/60 rounded-3xl p-8 gap-6 flex flex-col items-center md:hidden">
+      <div className="w-full bg-gray-900/60 rounded-3xl p-8 gap-6 flex flex-col items-center sm:hidden">
         <div className="rounded-full p-1 bg-gradient-to-br from-purple-500 to-cyan-600">
           <div className="rounded-full overflow-hidden">
             <Image src="/avatar.jpg" alt="Avatar" width={128} height={128} quality={80} priority={true} />
@@ -40,7 +40,7 @@ export function Header({title, subtitle, description, resumeText, resumeUrl, git
           </a>
         </div>
       </div>
-      <div className="w-full bg-gray-900/60 rounded-3xl p-8 gap-6 flex flex-row items-center max-md:hidden">
+      <div className="w-full bg-gray-900/60 rounded-3xl p-8 gap-6 flex flex-row items-center max-sm:hidden">
         <div className="rounded-full p-1 bg-gradient-to-br from-purple-500 to-cyan-600">
           <div className="rounded-full overflow-hidden">
             <Image src="/avatar.jpg" alt="Avatar" width={256} height={256} quality={80} priority={true} />
