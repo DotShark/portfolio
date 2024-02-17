@@ -29,7 +29,7 @@ export function NavMenu({sections}: NavMenuProps) {
       <nav className="fixed z-10 w-screen flex flex-col items-center">
         <div className="w-full bg-[#2C2848] drop-shadow-lg max-md:hidden flex flex-row justify-center">
           <div className="grow md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl flex flex-row justify-center relative">
-            <Link href="/" aria-label="Accueil">
+            <Link href="/" replace={true} aria-label="Accueil">
               <div className="absolute left-4 top-0 bottom-0 p-3 rounded-full hover:bg-gray-500/30 transition-colors">
                 <FiHome size={24} />
               </div>
@@ -51,7 +51,7 @@ export function NavMenu({sections}: NavMenuProps) {
         </div>
         <div className="w-full bg-[#2C2848] drop-shadow-lg flex flex-row justify-center md:hidden">
           <div className="grow max-w-md sm:max-w-screen-sm flex flex-row">
-            <Link href="/" className="px-4" aria-label="Accueil">
+            <Link href="/" replace={true} className="px-4" aria-label="Accueil">
               <div className="p-4 rounded-full hover:bg-gray-500/30 transition-colors">
                 <FiHome size={24} />
               </div>

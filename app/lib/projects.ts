@@ -35,10 +35,10 @@ export const projects: Project[] = [
       "## Quel est le public visé ?\n" +
       "Tech Tutor cible un public diversifié, incluant ceux qui ont peu d'expérience avec les technologies ou qui se sentent exclus de la révolution numérique.\n\n" +
       "L'application s'adresse particulièrement aux débutants de tous âges.\n" +
-      "## Quels défis avons-nous du relever ?\n" +
-      "- Nous avons du créer une interface simple et conviviale en réduisant au maximum le nombre de clics nécessaires pour effectuer une action.\n" +
-      "- Nous avons du faire en sorte que les utilisateurs ne soient jamais confrontés à une avalanche d'informations afin de pouvoir les faire progresser sans les effrayer.\n" +
-      "- Nous avons du trouver des solutions pour donner des indications aux utilisateurs quand aux progrès qu'ils font."
+      "## Quels défis avons-nous dû relever ?\n" +
+      "- Nous avons dû créer une interface simple et conviviale en réduisant au maximum le nombre de clics nécessaires pour effectuer une action.\n" +
+      "- Nous avons dû faire en sorte que les utilisateurs ne soient jamais confrontés à une avalanche d'informations afin de pouvoir les faire progresser sans les effrayer.\n" +
+      "- Nous avons dû trouver des solutions pour donner des indications aux utilisateurs quant aux progrès qu'ils font."
     ,
     usedSkills: [
       typescript,
@@ -67,12 +67,12 @@ export const projects: Project[] = [
       "Le public visé par Truckrs comprend deux parties :\n" +
       "- D’une part, les transporteurs à la recherche de conducteurs pour leurs missions.\n" +
       "- D’autre part, les conducteurs indépendants cherchant des opportunités de travail.\n" +
-      "## Quels défis avons-nous du relever ?\n" +
-      "- Nous avons du apprendre à nous mettre à la place des transporteurs et des conducteurs.\n" +
-      "- Nous avons du comprendre comment obtenir une expérience utilisateur fluide et intuitive en nous basant sur les maquettes produites par l'UX designer.\n" +
-      "- Nous avons du intégrer les fonctionnalités spécifiques aux transporteurs et aux conducteurs.\n" +
-      "- Nous avons du optimiser les performances de l’application mobile.\n" +
-      "- Nous avons du nous assurer que le back-end était robuste et sécurisé."
+      "## Quels défis avons-nous dû relever ?\n" +
+      "- Nous avons dû apprendre à nous mettre à la place des transporteurs et des conducteurs.\n" +
+      "- Nous avons dû comprendre comment obtenir une expérience utilisateur fluide et intuitive en nous basant sur les maquettes produites par l'UX designer.\n" +
+      "- Nous avons dû intégrer les fonctionnalités spécifiques aux transporteurs et aux conducteurs.\n" +
+      "- Nous avons dû optimiser les performances de l’application mobile.\n" +
+      "- Nous avons dû nous assurer que le back-end était robuste et sécurisé."
     ,
     usedSkills: [
       typescript,
