@@ -47,6 +47,9 @@ export const projects: Project[] = [
       prisma,
       react,
       tailwind
+    ],
+    links: [
+      {text: "Voir le site", url: "https://techtutor.dotshark.ovh"}
     ]
   },
   {
