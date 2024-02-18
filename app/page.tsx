@@ -39,7 +39,7 @@ export default function HomePage() {
             description="Bientôt titulaire d’un titre professionnel de concepteur développeur d'applications, 
             je souhaite intégrer une nouvelle entreprise à partir de mai 2024 pour faire suite à mon expérience chez Truckrs."
             resumeText="Voir mon CV"
-            resumeUrl="/cv-arnaud-petit.pdf"
+            resumeUrl="/resume"
             githubUrl="https://github.com/DotShark/"
             linkedInUrl="https://www.linkedin.com/in/arnaud-petit-dev/"
           />

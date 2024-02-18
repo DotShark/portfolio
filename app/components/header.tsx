@@ -3,6 +3,7 @@ import { montserratBold, montserratMedium } from "../lib/fonts";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { OutlinedButton } from "./outlined-button";
 import { ParticlesMask } from "./particles-mask";
+import Link from "next/link";
 
 type HeaderProps = {
   title: string,
@@ -28,9 +29,9 @@ export function Header({title, subtitle, description, resumeText, resumeUrl, git
           <h2 className={`text-xl text-center ${montserratMedium.className}`} >{subtitle}</h2>
         </div>
         <p className="text-base">{description}</p>
-        <a className="w-full" href={resumeUrl}>
+        <Link className="w-full" href={resumeUrl}>
           <OutlinedButton text={resumeText} large={true} />
-        </a>
+        </Link>
         <div className="flex flex-row -my-3 items-center justify-center w-full">
           <a className="p-3 rounded-full hover:bg-gray-500/30 transition-colors" href={githubUrl} aria-label="GitHub">
             <FiGithub size={24} />
@@ -53,9 +54,9 @@ export function Header({title, subtitle, description, resumeText, resumeUrl, git
           </div>
           <p className="text-base">{description}</p>
           <div className="flex flex-row gap-1 items-center">
-            <a href={resumeUrl}>
+            <Link href={resumeUrl}>
               <OutlinedButton text={resumeText} large={false} />
-            </a>
+            </Link>
             <div className="w-2"></div>
             <a className="p-3 rounded-full hover:bg-gray-500/30 transition-colors" href={githubUrl} aria-label="GitHub">
               <FiGithub size={24} />
