@@ -9,9 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tsparticles/engine": "^3.2.1",
+    "@tsparticles/engine": "^3.2.2",
     "@tsparticles/react": "^3.0.0",
-    "@tsparticles/slim": "^3.2.1",
+    "@tsparticles/slim": "^3.2.2",
     "@uidotdev/usehooks": "^2.4.1",
     "next": "14.1.0",
     "react": "^18",
