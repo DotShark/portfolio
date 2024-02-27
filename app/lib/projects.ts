@@ -103,7 +103,6 @@ export const projects: Project[] = [
       "J'ai été intégré dans une équipe dynamique où j'ai appris à collaborer efficacement et à appliquer des processus de développement structurés qui ont assuré la qualité et la maintenabilité du code.\n" +
       "Du côté back-end, j'ai contribué à la création des deux API REST, ce qui m'a permis de comprendre et d'implémenter une architecture MVC-like.\n" +
       "Cela m'a appris l'importance de structurer le code pour la robustesse et la facilité de maintenance.\n\n" +
-      "Cela m'a appris l'importance de structurer le code pour la robustesse et la facilité de maintenance.\n\n" +
       "Enfin, j'ai été impliqué dans des activités d'optimisation cruciales pour l'amélioration des performances.\n" +
       "J'ai appris à minimiser la taille des applications en compressant les ressources et en élaguant le code inutile.\n" +
       "De plus, l'adoption du lazy loading a été une leçon précieuse sur l'importance de l'expérience utilisateur, en rendant les applications plus rapides et plus réactives.\n\n" +
