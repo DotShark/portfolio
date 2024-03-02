@@ -8,6 +8,7 @@ export type Project = {
   shortDescription?: string,
   longDescription?: string,
   usedSkills: Skill[],
+  demoYoutubeId?: string,
   links?: ProjectLink[]
 };
 
@@ -36,20 +37,19 @@ export const projects: Project[] = [
       "Tech Tutor cible un public diversifié, incluant ceux qui ont peu d'expérience avec les technologies ou qui se sentent exclus de la révolution numérique.\n\n" +
       "L'application s'adresse particulièrement aux débutants de tous âges.\n" +
       "## Quels défis avons-nous dû relever ?\n" +
-      "- Nous avons dû créer une interface simple et conviviale en réduisant au maximum le nombre de clics nécessaires pour effectuer une action.\n" +
-      "- Nous avons dû faire en sorte que les utilisateurs ne soient jamais confrontés à une avalanche d'informations afin de pouvoir les faire progresser sans les effrayer.\n" +
-      "- Nous avons dû trouver des solutions pour donner des indications aux utilisateurs quant aux progrès qu'ils font.\n" +
-      "- Nous avons dû nous assurer que les infos qui étaient affichées étaient cohérentes entre les différentes pages.\n" +
+      "- Nous avons dû créer une interface utilisateur simple et conviviale, minimisant le nombre de clics pour réaliser une action.\n" +
+      "- Il a également été essentiel de présenter les informations de manière à ne pas submerger les utilisateurs, afin de les aider à progresser sereinement.\n" +
+      "- Nous avons cherché des moyens d'indiquer clairement aux utilisateurs leurs progrès.\n" +
+      "- Il a fallu veiller à la cohérence des informations affichées sur l'ensemble des pages.\n" +
       "## Comment avons-nous mené ce projet à bien ?\n" +
-      "Étant donné que nous ne disposions que de 20 jours pour livrer une première version de TechTutor, nous avons dû faire preuve d'une aptitude à prioriser efficacement les tâches et d'une communication claire et efficiente entre les différents membres de l’équipe.\n" +
-      "Nous nous sommes donc concentrés sur les fonctionnalités clés et avons adopté une méthodologie agile, avec une communication efficace via Notion et Slack, et des réunions quotidiennes pour assurer le suivi du projet et la résolution rapide des problèmes.\n\n" +
-      "Pour le back-end, nous avons développé une API REST en respectant une architecture MVC-like grâce à Node.js, Express et Prisma. Ce choix nous a permis de structurer efficacement les données et de garantir un code robuste et maintenable.\n" +
-      "Côté front-end, nous avons opté pour React pour sa flexibilité et sa capacité à créer des interfaces utilisateur interactives. Avec l'aide de Tailwind pour le style et Zustand pour la gestion de l'état, nous avons pu créer une application web performante et réactive.\n" +
+      "- Avec seulement 20 jours pour livrer une première version de TechTutor, nous avons dû prioriser nos tâches avec soin et maintenir une communication claire et efficace au sein de l'équipe. " +
+      "Nous nous sommes concentrés sur les fonctionnalités essentielles et avons suivi une méthodologie agile.\n" +
+      "- Pour le back-end, nous avons mis en place une API REST avec une architecture MVC-like en utilisant Node.js, Express et Prisma, ce qui a permis de structurer les données et d'assurer un code robuste.\n" +
+      "- Sur le front-end, nous avons choisi React pour sa flexibilité et Tailwind avec Zustand pour le style et la gestion de l'état, aboutissant à une application web réactive et performante.\n" +
       "## Qu’est-ce que le projet m’a appris ?\n" +
-      "TechTutor m'a enseigné des leçons précieuses, autant sur le plan technique que professionnel. Techniquement, j'ai renforcé mes compétences en full-stack avec Node.js et React et j'ai appris à gérer l'état de l'application avec Zustand.\n" +
-      "J'ai aussi amélioré mon approche de la conception d'interfaces utilisateurs, en m'assurant de leur accessibilité et intuitivité.\n" +
-      "Professionnellement, le projet a aiguisé ma capacité à travailler en équipe et ma communication.\n\n" +
-      "J'ai collaboré avec des collègues aux profils variés, appris à communiquer mes idées efficacement et à prioriser les tâches essentielles, ce qui était crucial pour le succès du projet dans un délai restreint."
+      "- Sur le plan technique, TechTutor m'a permis d'approfondir mes compétences en développement full-stack avec Node.js et React.\n" +
+      "- J'ai également amélioré ma capacité à concevoir des interfaces utilisateurs intuitives et accessibles.\n" +
+      "- Professionnellement, j'ai renforcé mes compétences en travail d'équipe et en communication, apprenant à exprimer efficacement mes idées et à prioriser les tâches."
     ,
     usedSkills: [
       typescript,
@@ -82,31 +82,19 @@ export const projects: Project[] = [
       "- D’une part, les transporteurs à la recherche de conducteurs pour leurs missions.\n" +
       "- D’autre part, les conducteurs indépendants cherchant des opportunités de travail.\n" +
       "## Quels défis avons-nous dû relever ?\n" +
-      "- Nous avons dû apprendre à nous mettre à la place des transporteurs et des conducteurs.\n" +
-      "- Nous avons dû comprendre comment obtenir une expérience utilisateur fluide et intuitive en nous basant sur les maquettes produites par l'UX designer.\n" +
-      "- Nous avons dû intégrer les fonctionnalités spécifiques aux transporteurs et aux conducteurs.\n" +
-      "- Nous avons dû optimiser les performances de l’application mobile.\n" +
-      "- Nous avons dû nous assurer que le back-end était robuste et sécurisé.\n" +
-      "- Nous avons dû nous assurer que les infos qui étaient affichées étaient cohérentes entre les différentes pages.\n" +
+      "- Nous avons dû nous mettre à la place des utilisateurs, en particulier des transporteurs et des conducteurs.\n" +
+      "- Il a fallu comprendre et appliquer les principes de design d'interface à partir des maquettes de l'UX designer.\n" +
+      "- Il a été primordial de s'assurer de la robustesse et de la sécurité du back-end.\n" +
+      "- Il fallait que l'application mobile soit bien optimisé.\n" +
+      "La cohérence des informations affichées sur les différentes pages a également été un enjeu important.\n" +
       "## Comment avons-nous mené ce projet à bien ?\n" +
-      "Pour que ce projet puisse être un succès, il fallait une équipe soudée capable de s’adapter rapidement aux besoins des utilisateurs, d’avoir le sens des priorités et de communiquer efficacement.\n" +
-      "C’est pourquoi nous avons instauré des rituels de communication réguliers, tels que des daily meetings et des démos techniques, qui ont permis à l'équipe de rester alignée sur les objectifs du projet et de résoudre rapidement les problèmes émergents.\n" +
-      "L'adoption d'outils de gestion de projet et de collaboration en ligne tels que Gitlab, YouTrack et Slack a également joué un rôle crucial dans le maintien de la transparence.\n\n" +
-      "Au niveau de architecture, nous avons développé deux API REST avec une architecture MVC-like en utilisant TypeScript, Node.js, Express et Sequelize, ce qui a assuré robustesse et maintenabilité côté back-end.\n" +
-      "Pour le front-end, nous avons opté pour Flutter et Dart en appliquant la clean architecture et le pattern BLoC, garantissant ainsi une séparation claire des responsabilités et une réactivité optimale des applications.\n" +
-      "Ces choix technologiques nous ont permis de créer des solutions performantes et évolutives qui répondent efficacement aux exigences du projet.\n\n" +
-      "Un autre sujet important était l’optimisation. En back-end, nous avons minimisé les requêtes de base de données et utilisé la mise en cache pour accélérer les réponses API.\n" +
-      "Côté front-end, la compression des ressources et la suppression du code superflu ont allégé les applications, tandis que l'implémentation du lazy loading a accéléré les temps de chargement.\n" +
-      "Ces améliorations ont rendu les applications plus réactives et ont amélioré l'expérience utilisateur.\n" +
+      "- Le succès du projet a reposé sur la cohésion de l'équipe et sa capacité à s'adapter rapidement. Des rituels de communication comme les daily meetings et des démos techniques ont été établis pour maintenir l'alignement sur les objectifs.\n" +
+      "- Nous avons adopté des outils de gestion de projet et de collaboration en ligne pour conserver la transparence et l'efficacité.\n" +
+      "- Du point de vue technique, nous avons mis en place deux API REST avec une architecture MVC-like en utilisant Node.js, Express et Sequelize pour le back-end. Pour le front-end nous avons choisi Flutter et Dart avec la clean architecture et le pattern BLoC.\n" +
       "## Qu’est-ce que le projet m’a appris ?\n" +
-      "Ayant rejoint l'équipe en tant que développeur full-stack junior, ce projet m'a offert une expérience complète qui a grandement enrichi mes compétences techniques et professionnelles.\n" +
-      "J'ai été intégré dans une équipe dynamique où j'ai appris à collaborer efficacement et à appliquer des processus de développement structurés qui ont assuré la qualité et la maintenabilité du code.\n" +
-      "Du côté back-end, j'ai contribué à la création des deux API REST, ce qui m'a permis de comprendre et d'implémenter une architecture MVC-like.\n" +
-      "Cela m'a appris l'importance de structurer le code pour la robustesse et la facilité de maintenance.\n\n" +
-      "Enfin, j'ai été impliqué dans des activités d'optimisation cruciales pour l'amélioration des performances.\n" +
-      "J'ai appris à minimiser la taille des applications en compressant les ressources et en élaguant le code inutile.\n" +
-      "De plus, l'adoption du lazy loading a été une leçon précieuse sur l'importance de l'expérience utilisateur, en rendant les applications plus rapides et plus réactives.\n\n" +
-      "Ce projet a été une occasion formidable pour moi de mettre en pratique mes connaissances théoriques dans un environnement réel, d'appréhender les défis du développement full-stack et d'améliorer considérablement mon savoir-faire technique."
+      "- J'ai appris l'importance de la structure du code pour la robustesse du back-end à travers l'implémentation d'une architecture MVC-like.\n" +
+      "- J'ai compris comment appliquer la clean architecture et le pattern BLoC pour une meilleure maintenabilité et séparation des responsabilités dans le développement front-end.\n" +
+      "- Les activités d'optimisation m'ont enseigné à réduire la taille des applications et à améliorer la réactivité grâce à des techniques comme le lazy loading, ce qui améliore significativement l'expérience utilisateur.\n"
     ,
     usedSkills: [
       typescript,
@@ -116,6 +104,7 @@ export const projects: Project[] = [
       dart,
       flutter
     ],
+    demoYoutubeId: "VxXeVpwSRtE",
     links: [
       {text: "App conducteurs", url: "https://app.truckrs.co/redirect-store"},
       {text: "App transporteurs", url: "https://app.truckrs.co/redirect-store-pro"}

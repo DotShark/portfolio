@@ -10,14 +10,15 @@ import { Title } from "@/app/components/title";
 import { getProject } from "@/app/lib/projects";
 import { Section } from "@/app/lib/section";
 import { useRef } from "react";
+import ReactPlayer from "react-player/youtube";
 
 type ProjectPageParams = {
   slug: string
 };
 
 export default function ProjectPage({params}: {params: ProjectPageParams}) {
-  const {slug, name, period, imagePath, shortDescription, longDescription, usedSkills, links} = getProject(params.slug);
-  
+  const {slug, name, period, imagePath, shortDescription, longDescription, demoYoutubeId, usedSkills, links} = getProject(params.slug);
+
   const headerSection: Section = {
     title: "Résumé",
     ref: useRef<HTMLDivElement | null>(null)
@@ -25,6 +26,11 @@ export default function ProjectPage({params}: {params: ProjectPageParams}) {
 
   const descriptionSection: Section = {
     title: "Le projet",
+    ref: useRef<HTMLDivElement | null>(null)
+  };
+
+  const demoSection: Section = {
+    title: "Démo du projet",
     ref: useRef<HTMLDivElement | null>(null)
   };
 
@@ -51,6 +57,21 @@ export default function ProjectPage({params}: {params: ProjectPageParams}) {
           <Title text="Le projet" />
           <ProjectDescription description={longDescription ?? shortDescription} />
         </section>
+        {
+          demoYoutubeId && <section ref={demoSection.ref} className="w-full flex flex-col gap-4 scroll-m-20">
+            <Title text="Démo du projet" />
+            <div className="w-full aspect-video rounded-3xl overflow-hidden">
+              <ReactPlayer 
+                url={`https://www.youtube.com/watch?v=${demoYoutubeId}`} 
+                width="100%"
+                height="100%"
+                controls={true}
+                light={`https://i.ytimg.com/vi/${demoYoutubeId}/maxresdefault.jpg`}
+                playing={true}
+              />
+            </div>
+          </section>
+        }
         {
           links && <section ref={linksSection.ref} className="w-full flex flex-col gap-4 scroll-m-20">
             <Title text="Liens" />
