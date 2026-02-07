@@ -36,7 +36,7 @@ export function NavMenu({sections}: NavMenuProps) {
             </Link>
             <ul className="p-3 flex flex-row gap-6">
               {
-                sections.reduce((sectionsElements: JSX.Element[], section, index) => {
+                sections.reduce((sectionsElements: React.ReactNode[], section, index) => {
                   sectionsElements.push(
                     <li className={`${montserratMedium.className} text-lg uppercase hover:text-cyan-200 transition-colors`}>
                       <button onClick={() => handleNavClick(section.ref)}>{section.title}</button>
