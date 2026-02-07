@@ -86,7 +86,7 @@ export default function HomePage() {
       </main>
       <Footer
         name="Arnaud Petit"
-        year="2024"
+        year="2026"
         sourceUrl="https://github.com/DotShark/portfolio"
       />
       <div className="fixed w-screen h-screen bg-dark-gradient -z-10"></div>
