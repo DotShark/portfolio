@@ -1,15 +1,17 @@
 "use client";
 
-import { Document, Page } from "react-pdf";
 import { Footer } from "../components/footer";
 import { LinkedParticles } from "../components/linked-particles";
-import { pdfjs } from "react-pdf";
 import { useWindowSize } from "@uidotdev/usehooks";
 import { Title } from "../components/title";
 import { OutlinedButton } from "../components/outlined-button";
 import { FiDownload } from "react-icons/fi";
+import dynamic from "next/dynamic";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+const PdfViewer = dynamic(() => import("../components/pdf-viewer"), {
+  ssr: false,
+  loading: () => <div className="w-full aspect-[1/1.41] bg-white/60 animate-pulse"></div>
+});
 
 export default function ResumePage() {
   const {width} = useWindowSize();
@@ -29,17 +31,10 @@ export default function ResumePage() {
       <main className="p-6 w-full max-w-md sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl flex flex-col gap-8 items-center">
         <Title text="Mon CV" />
         <div className="w-full rounded-3xl overflow-hidden">
-          <Document 
+          <PdfViewer
             file="/cv-arnaud-petit.pdf"
-            loading={<div className="w-full aspect-[1/1.41] bg-white/60 animate-pulse"></div>}
-          >
-            <Page
-              pageNumber={1}
-              renderAnnotationLayer={false}
-              renderTextLayer={false}
-              width={getPageWidth()}
-            />
-          </Document>
+            width={getPageWidth()}
+          />
         </div>
         <a className="w-full" href="/cv-arnaud-petit.pdf">
           <OutlinedButton text="Télecharger" large={true} leftIcon={<FiDownload size={20} />} />
