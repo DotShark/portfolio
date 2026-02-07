@@ -19,7 +19,7 @@ export function Header({title, subtitle, description, resumeText, resumeUrl, git
   return (
     <ParticlesMask>
       <div className="w-full bg-gray-900/60 rounded-3xl p-8 gap-6 flex flex-col items-center sm:hidden">
-        <div className="rounded-full p-1 bg-gradient-to-br from-purple-500 to-cyan-600">
+        <div className="rounded-full p-1 bg-linear-to-br from-purple-500 to-cyan-600">
           <div className="rounded-full overflow-hidden">
             <Image src="/avatar.jpg" alt="Avatar" width={128} height={128} quality={80} priority={false} />
           </div>
@@ -33,16 +33,16 @@ export function Header({title, subtitle, description, resumeText, resumeUrl, git
           <OutlinedButton text={resumeText} large={true} />
         </Link>
         <div className="flex flex-row -my-3 items-center justify-center w-full">
-          <a className="p-3 rounded-full hover:bg-gray-500/30 transition-colors" href={githubUrl} aria-label="GitHub">
+          <a className="p-3 rounded-full hover:bg-gray-500/30 active:bg-gray-500/30 transition-colors" href={githubUrl} aria-label="GitHub">
             <FiGithub size={24} />
           </a>
-          <a className="p-3 rounded-full hover:bg-gray-500/30 transition-colors" href={linkedInUrl} aria-label="LinkedIn">
+          <a className="p-3 rounded-full hover:bg-gray-500/30 active:bg-gray-500/30 transition-colors" href={linkedInUrl} aria-label="LinkedIn">
             <FiLinkedin size={24} />
           </a>
         </div>
       </div>
       <div className="w-full bg-gray-900/60 rounded-3xl p-8 gap-6 flex flex-row items-center max-sm:hidden">
-        <div className="rounded-full p-1 bg-gradient-to-br from-purple-500 to-cyan-600">
+        <div className="rounded-full p-1 bg-linear-to-br from-purple-500 to-cyan-600">
           <div className="rounded-full overflow-hidden">
             <Image src="/avatar.jpg" alt="Avatar" width={256} height={256} quality={80} priority={false} />
           </div>
@@ -58,10 +58,10 @@ export function Header({title, subtitle, description, resumeText, resumeUrl, git
               <OutlinedButton text={resumeText} large={false} />
             </Link>
             <div className="w-2"></div>
-            <a className="p-3 rounded-full hover:bg-gray-500/30 transition-colors" href={githubUrl} aria-label="GitHub">
+            <a className="p-3 rounded-full hover:bg-gray-500/30 active:bg-gray-500/30 transition-colors" href={githubUrl} aria-label="GitHub">
               <FiGithub size={24} />
             </a>
-            <a className="p-3 rounded-full hover:bg-gray-500/30 transition-colors" href={linkedInUrl} aria-label="LinkedIn">
+            <a className="p-3 rounded-full hover:bg-gray-500/30 active:bg-gray-500/30 transition-colors" href={linkedInUrl} aria-label="LinkedIn">
               <FiLinkedin size={24} />
             </a>
           </div>

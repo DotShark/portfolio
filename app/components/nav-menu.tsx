@@ -28,9 +28,9 @@ export function NavMenu({sections}: NavMenuProps) {
     <ClickAwayListener onClickAway={closeMenu}>
       <nav className="fixed z-10 w-screen flex flex-col items-center">
         <div className="w-full bg-[#2C2848] drop-shadow-lg max-md:hidden flex flex-row justify-center">
-          <div className="grow md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl flex flex-row justify-center relative">
+          <div className="grow md:max-w-3xl lg:max-w-5xl xl:max-w-7xl flex flex-row justify-center relative">
             <Link href="/" replace={true} aria-label="Accueil">
-              <div className="absolute left-4 top-0 bottom-0 p-3 rounded-full hover:bg-gray-500/30 transition-colors">
+              <div className="absolute left-4 top-0 bottom-0 p-3 rounded-full hover:bg-gray-500/30 active:bg-gray-500/30 transition-colors">
                 <FiHome size={24} />
               </div>
             </Link>
@@ -38,8 +38,8 @@ export function NavMenu({sections}: NavMenuProps) {
               {
                 sections.reduce((sectionsElements: React.ReactNode[], section, index) => {
                   sectionsElements.push(
-                    <li key={section.title} className={`${montserratMedium.className} text-lg uppercase hover:text-cyan-200 transition-colors`}>
-                      <button onClick={() => handleNavClick(section.ref)}>{section.title}</button>
+                    <li key={section.title} className={`${montserratMedium.className} text-lg uppercase hover:text-cyan-200 active:text-cyan-200 transition-colors`}>
+                      <button className="cursor-pointer" onClick={() => handleNavClick(section.ref)}>{section.title}</button>
                     </li>
                   );
                   if (index < sections.length - 1) sectionsElements.push(<li key={`separator-${index}`} className={`${montserratMedium.className} text-xl uppercase`}>•</li>)
@@ -52,13 +52,13 @@ export function NavMenu({sections}: NavMenuProps) {
         <div className="w-full bg-[#2C2848] drop-shadow-lg flex flex-row justify-center md:hidden">
           <div className="grow max-w-md sm:max-w-screen-sm flex flex-row">
             <Link href="/" replace={true} className="px-4" aria-label="Accueil">
-              <div className="p-4 rounded-full hover:bg-gray-500/30 transition-colors">
+              <div className="p-4 rounded-full hover:bg-gray-500/30 active:bg-gray-500/30 transition-colors">
                 <FiHome size={24} />
               </div>
             </Link>
             <div className="grow"></div>
             <button className="px-4" aria-label="Menu">
-              <div className="p-4 rounded-full hover:bg-gray-500/30 transition-colors" onClick={toggleMenu}>
+              <div className="p-4 rounded-full hover:bg-gray-500/30 active:bg-gray-500/30 transition-colors cursor-pointer" onClick={toggleMenu}>
                 <FiMenu size={24} />
               </div>
             </button>
@@ -68,8 +68,8 @@ export function NavMenu({sections}: NavMenuProps) {
           <ul className="grow max-w-md sm:max-w-screen-sm px-8 flex flex-col">
             {
               sections.map((section) => (
-                <li key={section.title} className="py-2 hover:text-cyan-200 transition-colors">
-                  <button className="w-full text-left" onClick={() => handleNavClick(section.ref)}>{section.title}</button>
+                <li key={section.title} className="py-2 hover:text-cyan-200 active:text-cyan-200 transition-colors">
+                  <button className="w-full text-left cursor-pointer" onClick={() => handleNavClick(section.ref)}>{section.title}</button>
                 </li>  
               ))
             }
