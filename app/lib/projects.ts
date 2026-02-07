@@ -60,7 +60,7 @@ export const projects: Project[] = [
       tailwind
     ],
     links: [
-      {text: "Voir le site", url: "https://techtutor.dotshark.ovh"}
+      {text: "Voir le site", url: "https://techtutor.dotshark.dev"}
     ]
   },
   {
