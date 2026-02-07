@@ -38,11 +38,11 @@ export function NavMenu({sections}: NavMenuProps) {
               {
                 sections.reduce((sectionsElements: React.ReactNode[], section, index) => {
                   sectionsElements.push(
-                    <li className={`${montserratMedium.className} text-lg uppercase hover:text-cyan-200 transition-colors`}>
+                    <li key={section.title} className={`${montserratMedium.className} text-lg uppercase hover:text-cyan-200 transition-colors`}>
                       <button onClick={() => handleNavClick(section.ref)}>{section.title}</button>
                     </li>
                   );
-                  if (index < sections.length - 1) sectionsElements.push(<li className={`${montserratMedium.className} text-xl uppercase`}>•</li>)
+                  if (index < sections.length - 1) sectionsElements.push(<li key={`separator-${index}`} className={`${montserratMedium.className} text-xl uppercase`}>•</li>)
                   return sectionsElements;
                 }, [])
               }
