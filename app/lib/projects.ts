@@ -1,4 +1,4 @@
-import { Skill, dart, docker, express, flutter, git, nodejs, prisma, react, sequelize, tailwind, typescript } from "./skills";
+import { Skill, dart, directus, docker, express, flutter, git, githubActions, nest, nodejs, nuxt, postgreSQL, prisma, react, sequelize, tailwind, typescript, vue } from "./skills";
 
 export type Project = {
   slug: string,
@@ -18,6 +18,108 @@ export type ProjectLink = {
 };
 
 export const projects: Project[] = [
+  {
+    slug: "hylest",
+    name: "Hylest",
+    period: ["Avril 2025", "Février 2026"],
+    imagePath: "/projects/hylest.png",
+    shortDescription: "Hylest est une application qui permet aux utilisateurs de transmettre automatiquement leurs données numériques personnelles à leurs proches après une période prolongée d'inactivité, de manière sécurisée et respectueuse de la vie privée.",
+    longDescription:
+      "## Hylest, qu'est-ce que c'est ?\n" +
+      "Hylest est une application qui permet aux utilisateurs de transmettre automatiquement leurs données numériques personnelles à leurs proches après une période prolongée d'inactivité. " +
+      "L'objectif est de fournir une solution sécurisée, simple et respectueuse de la vie privée pour gérer la transmission de données post-mortem.\n" +
+      "## Pourquoi ce projet ?\n" +
+      "À l'ère du numérique, nos vies sont de plus en plus présentes en ligne : photos, messages, documents importants. " +
+      "Pourtant, la question de la transmission de ce patrimoine numérique reste souvent négligée. " +
+      "Hylest répond à ce besoin en permettant aux utilisateurs de préparer sereinement la transmission de leurs données numériques à leurs proches, " +
+      "tout en garantissant la sécurité et la confidentialité de ces informations sensibles.\n" +
+      "## Dans quel contexte ai-je travaillé sur ce projet ?\n" +
+      "J'ai rejoint Hylest en alternance en avril 2025 avec le rôle de développeur full-stack. " +
+      "L'équipe est composée du fondateur, d'un stagiaire et moi-même. Au moment où l'équipe était au plus grand, il y avait 2 stagiaires en plus de moi. " +
+      "Étant devenu lead dev, j'ai la responsabilité de structurer le développement technique et d'encadrer les autres développeurs.\n" +
+      "## Quel est le public visé ?\n" +
+      "Hylest s'adresse à toute personne souhaitant anticiper la transmission de son patrimoine numérique. " +
+      "Cela concerne particulièrement les personnes soucieuses de préserver leurs données personnelles tout en s'assurant que leurs proches pourront y accéder en cas de besoin.\n" +
+      "## Quels défis ai-je dû relever ?\n" +
+      "- Garantir la sécurité et la confidentialité des données sensibles en utilisant des prestataires cloud français pour l'hébergement.\n" +
+      "- Trouver le bon équilibre entre la rapidité de livraison du MVP, la sécurité des données, l'intégrité des données et la scalabilité de la solution.\n" +
+      "- Prendre le rôle de lead développeur et mettre en place des pratiques de développement rigoureuses (code reviews, conventional commits, SCRUM).\n" +
+      "- Assurer l'adoption de l'application en créant une expérience utilisateur simple et rassurante pour un sujet aussi sensible.\n" +
+      "## Comment ai-je mené ce projet à bien ?\n" +
+      "- J'ai choisi NestJS pour le back-end, permettant de structurer une architecture modulaire monolithique robuste et maintenable.\n" +
+      "- PostgreSQL a été sélectionné pour garantir l'intégrité des données avec MikroORM comme ORM.\n" +
+      "- Pour l'application mobile, Flutter avec une architecture MVVM (Provider + Dio) assure une expérience utilisateur fluide et cohérente.\n" +
+      "- L'hébergement sur Scaleway (S3, base de données et back-end) garantit la souveraineté des données avec des prestataires français.\n" +
+      "- J'ai mis en place SCRUM pour structurer le développement, avec des feature branches et des code reviews obligatoires pour maintenir la qualité du code.\n" +
+      "- L'utilisation de conventional commits permet de garder un historique de changements clair et compréhensible.\n" +
+      "## Qu'est-ce que le projet m'a appris ?\n" +
+      "- J'ai appris NestJS pour ce projet, ce qui m'a permis de maîtriser une architecture back-end moderne et scalable basée sur TypeScript.\n" +
+      "- J'ai développé mes compétences en leadership technique en prenant le rôle de lead développeur et en mettant en place des processus de développement structurés.\n" +
+      "- J'ai approfondi ma compréhension des enjeux de sécurité et de confidentialité des données, particulièrement critiques pour un projet comme Hylest.\n" +
+      "- J'ai appris à gérer les compromis entre vitesse de développement et qualité technique, un équilibre essentiel pour la réussite d'un MVP.\n" +
+      "- L'application de SCRUM m'a permis de structurer le travail d'équipe et d'améliorer la prévisibilité des livraisons."
+    ,
+    usedSkills: [
+      typescript,
+      nest,
+      postgreSQL,
+      flutter,
+      dart,
+      git,
+      docker,
+      githubActions
+    ],
+    links: [
+      {text: "Voir le site", url: "https://hylest.com"}
+    ]
+  },
+  {
+    slug: "somestuff-studio",
+    name: "Some Stuff Studio",
+    period: ["Janvier 2025", "Avril 2025"],
+    imagePath: "/projects/sss.jpg",
+    shortDescription: "Some Stuff Studio est le site vitrine d'un studio 3D parisien spécialisé dans la création de contenus visuels de haute qualité : documentaires, publicités, brand content et animations 3D.",
+    longDescription:
+      "## Some Stuff Studio, qu'est-ce que c'est ?\n" +
+      "Some Stuff Studio est le site web d'un studio 3D basé à Paris, spécialisé dans la création de contenus visuels haut de gamme. " +
+      "Le studio réalise des projets variés allant des documentaires pour Arte aux campagnes publicitaires pour des marques de luxe comme Breitling et Renault.\n" +
+      "## Pourquoi ce projet ?\n" +
+      "Le studio avait besoin d'une vitrine digitale pour présenter son portfolio de manière immersive et professionnelle. " +
+      "L'objectif était de créer une expérience utilisateur qui reflète la qualité créative du studio tout en mettant en valeur les projets vidéo de manière optimale.\n" +
+      "## Dans quel contexte ai-je travaillé sur ce projet ?\n" +
+      "J'ai réalisé ce projet en stage de janvier à avril 2025. J'étais seul sur le développement technique, travaillant en collaboration avec le studio pour traduire leur vision créative en réalité.\n" +
+      "## Quel est le public visé ?\n" +
+      "Le site s'adresse à des clients potentiels du studio : marques de luxe, chaînes de télévision, agences de publicité et producteurs cherchant un partenaire pour leurs projets de production audiovisuelle.\n" +
+      "## Quels défis ai-je dû relever ?\n" +
+      "- Optimiser les performances vidéo pour garantir une navigation fluide malgré un contenu multimédia lourd. J'ai mis en place un serveur HLS pour le streaming adaptatif.\n" +
+      "- Intégrer des animations complexes tout en maintenant d'excellentes performances.\n" +
+      "- Structurer un CMS headless (Directus) pour permettre au studio de gérer facilement son portfolio sans compétences techniques.\n" +
+      "- Traduire une vision artistique forte en code, en respectant l'identité créative du studio.\n" +
+      "## Comment ai-je mené ce projet à bien ?\n" +
+      "- J'ai choisi Nuxt pour sa performance et ses capacités SSR, garantissant un excellent référencement et des temps de chargement optimaux.\n" +
+      "- Pour le back-end, j'ai intégré Directus comme CMS headless, offrant une interface intuitive pour la gestion du contenu.\n" +
+      "- J'ai développé une infrastructure de streaming vidéo avec HLS pour assurer une lecture fluide quel que soit le débit de connexion.\n" +
+      "- L'utilisation de Docker a facilité le déploiement et la maintenance de l'application.\n" +
+      "## Qu'est-ce que le projet m'a appris ?\n" +
+      "- J'ai approfondi mes compétences en optimisation de performances, notamment pour le streaming vidéo et les animations web.\n" +
+      "- J'ai appris à traduire une vision créative en code fonctionnel, en collaborant étroitement avec des professionnels non techniques.\n" +
+      "- Ce projet m'a permis de maîtriser l'intégration d'un CMS headless et de comprendre les enjeux d'un système de gestion de contenu performant.\n" +
+      "- J'ai renforcé ma capacité à travailler de manière autonome sur un projet complet, de la conception à la mise en production."
+    ,
+    usedSkills: [
+      typescript,
+      nuxt,
+      vue,
+      nodejs,
+      directus,
+      git,
+      docker,
+      githubActions
+    ],
+    links: [
+      {text: "Voir le site", url: "https://somestuff.studio/"}
+    ]
+  },
   {
     slug: "techtutor",
     name: "TechTutor",

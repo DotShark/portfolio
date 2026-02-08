@@ -40,6 +40,8 @@ export const sequelize: Skill = {iconPath: "/icons/sequelize.svg", text: "Sequel
 
 export const prisma: Skill = {iconPath: "/icons/prisma.svg", text: "Prisma", color: "bg-gray-500/40"};
 
+export const directus: Skill = {iconPath: "/icons/directus.svg", text: "Directus", color: "bg-purple-600/40"};
+
 export const figma: Skill = {iconPath: "/icons/figma.svg", text: "Figma", color: "bg-gray-500/40"};
 
 export const adobePhotoshop: Skill = {iconPath: "/icons/adobe-photoshop.svg", text: "Adobe Photoshop", color: "bg-blue-500/40"};
