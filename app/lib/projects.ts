@@ -1,4 +1,4 @@
-import { Skill, dart, express, flutter, nodejs, prisma, react, sequelize, tailwind, typescript } from "./skills";
+import { Skill, dart, docker, express, flutter, git, nodejs, prisma, react, sequelize, tailwind, typescript } from "./skills";
 
 export type Project = {
   slug: string,
@@ -57,7 +57,9 @@ export const projects: Project[] = [
       express,
       prisma,
       react,
-      tailwind
+      tailwind,
+      git,
+      docker
     ],
     links: [
       {text: "Voir le site", url: "https://techtutor.dotshark.dev"}
@@ -102,7 +104,9 @@ export const projects: Project[] = [
       express,
       sequelize,
       dart,
-      flutter
+      flutter,
+      git,
+      docker
     ],
     demoYoutubeId: "VxXeVpwSRtE",
     links: [

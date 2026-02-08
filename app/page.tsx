@@ -36,8 +36,9 @@ export default function HomePage() {
           <Header
             title="Arnaud Petit"
             subtitle="Développeur full-stack"
-            description="Bientôt titulaire d’un titre professionnel de concepteur développeur d'applications, 
-            je souhaite intégrer une nouvelle entreprise à partir de mai 2024 pour faire suite à mon expérience chez Truckrs."
+            description="J'aime créer des applications web et mobiles qui répondent à de réels besoins. 
+            J'accompagne startups, PME et porteurs de projets en transformant leurs idées en solutions concrètes. 
+            Mon approche : allier technique solide et vision produit en conseillant à chaque étape."
             resumeText="Voir mon CV"
             resumeUrl="/resume"
             githubUrl="https://github.com/DotShark/"
@@ -49,7 +50,7 @@ export default function HomePage() {
           <div className="flex flex-row flex-wrap justify-center items-stretch gap-8">
             {
               skillCategories.map(({iconPath, color, title, skills}, key) => (
-                <div key={key} className="basis-full sm:basis-[calc(50%-1rem)] lg:basis-[calc(33.33333333%-1.5rem)]">
+                <div key={key} className="basis-full sm:basis-[calc(50%-1rem)] xl:basis-[calc(25%-1.5rem)]">
                   <SkillsList 
                     key={key} 
                     iconPath={iconPath} 

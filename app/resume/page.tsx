@@ -28,7 +28,7 @@ export default function ResumePage() {
 
   return (
     <div className="min-h-screen flex flex-col gap-8 items-center justify-between">
-      <main className="p-6 w-full max-w-md sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl flex flex-col gap-8 items-center">
+      <main className="p-6 w-full max-w-md sm:max-w-screen-sm md:max-w-3xl lg:max-w-5xl xl:max-w-7xl flex flex-col gap-8 items-center">
         <Title text="Mon CV" />
         <div className="w-full rounded-3xl overflow-hidden">
           <PdfViewer
